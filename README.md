@@ -2,7 +2,7 @@
 This Terraform template creates a Valtix ingress and egress gateways in a AWS centralized inspection architecture with Transit Gateway.  The templates are split into the following template folders:
 
 ## valtix_iam
-This template creates the IAM policies and roles required for Valtix controller to work with the AWS account as well as the account registration on the Valtix controller.  This is created in a separate template as these resources tend to be more mostly static in a deployment.  
+This template creates the IAM policies and roles required for Valtix controller to work with the AWS account as well as the account registration on the Valtix controller.  This is created in a separate template as these resources tend to be mostly static in a deployment.  
 
 ## valtix_policy
 This template creates example IPS, WAF, Malicious Sources profiles, address objects, services, rules and policy rulesets.  The reason why this was created as a separate template is that these resources tend to be more dynamic in most deployments.
