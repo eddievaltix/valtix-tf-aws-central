@@ -1,0 +1,12 @@
+
+**/.terraform
+**/terraform.d
+*.tfstate
+*.tfstate.backup
+credentials.json
+*.key
+*.pem
+*.pub
+*.tfvars
+values
+/keys
