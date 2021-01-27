@@ -1,14 +1,3 @@
-//Valtix IAM Terraform remote state data source
-variable "valtix_iam_tf_remote_state_bucket" {
-  description = "Valtix IAM Terraform remote state S3 bucket"
-}
-variable "valtix_iam_tf_remote_state_key" {
-  description = "Valtix IAM Terraform remote state S3 bucket key"
-}
-variable "valtix_iam_tf_remote_state_region" {
-  description = "Valtix IAM Terraform remote state region"
-}
-
 //provider variables
 variable "valtix_account_name" {
   description = "account name provided by Valtix"

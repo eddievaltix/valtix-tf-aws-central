@@ -1,0 +1,30 @@
+//provider variables
+tf_remote_state_bucket            = ""
+tf_remote_state_valtix_iam_key    = ""
+tf_remote_state_region            = "us-west-2"
+tf_remote_state_valtix_policy_key = ""
+
+//provider variables
+aws_profile_name_security = ""
+valtix_account_name       = "" //get this from Valtix
+valtix_controller_url     = "" //get this from Valtix
+valtix_key_file           = "./keys/valtix_api.key"
+
+//iam and cloud account variables
+region                    = ""
+cloud_account_name        = ""
+
+//service vpc variables
+services_vpc_ingress_name = "valtix_ingress"
+services_vpc_egress_name  = "valtix_egress"
+ingress_cidr              = "10.100.0.0/24"
+egress_cidr               = "10.100.1.0/24"
+availability_zones        = ["us-west-2a", "us-west-2b"]
+
+//transit gateway variable
+transit_gateway_name = "tgw-valtix"
+
+//Valtix gateway variables
+valtix_ingress_gw_name = "aws-valtix-us-west-2-ingress"
+valtix_egress_gw_name  = "aws-valtix-us-west-2-egress"
+gw_keypair_name        = "valtix-keypair"
