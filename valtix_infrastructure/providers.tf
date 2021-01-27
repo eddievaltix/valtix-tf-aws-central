@@ -1,14 +1,3 @@
-// Define Terraform remote state backend
-terraform {
-  backend "s3" {
-    bucket         = var.tf_backend_bucket
-    key            = var.tf_backend_key
-    region         = var.tf_backend_region
-    dynamodb_table = var.tf_dynamodb_table_name
-    encrypt        = true
-  }
-}
-
 // Define both AWS and Valtix Terraform Resource Providers
 terraform {
   required_providers {

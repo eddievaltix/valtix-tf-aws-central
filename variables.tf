@@ -1,3 +1,17 @@
+//Terraform S3 DynamoDB remote state backend variables
+variable "tf_backend_bucket" {
+  description = "S3 bucket name for Terraform backend"
+}
+variable "tf_backend_key" {
+  description = "remote state S3 object key.  Enter the object path and Terraform state file name"
+}
+variable "tf_backend_region" {
+  description = "region where Terraform DynamoDB table is configured for file locking"
+}
+variable "tf_dynamodb_table_name" {
+  description = "DynamoDB table name used for Terraform remote state backend"
+}
+
 //provider variables
 variable "aws_profile_name_security" {
   description = "AWS profile credentials used to establish connection to AWS Network Security Account where Valtix is deployed"
@@ -38,6 +52,12 @@ variable "cloud_account_name" {
 }
 
 //service vpc variables
+variable "services_vpc_ingress_name" {
+  description = "name of ingress Valtix Services VPC"
+}
+variable "services_vpc_egress_name" {
+  description = "name of egress Valtix Services VPC"
+}
 variable "ingress_cidr" {
   description = "CIDR block for ingress services VPC"
 }
@@ -80,4 +100,28 @@ variable "ingress_decryptprofile_name" {
 }
 variable "egress_decryptprofile_name" {
   description = "decryption profile name associated with egress certificate"
+}
+
+//policy ruleset variables
+variable "ingress_policy_ruleset_name" {
+  description = "name of ingress policy ruleset"
+}
+variable "egress_policy_ruleset_name" {
+  description = "name of egress policy ruleset"
+}
+
+//transit gateway variable
+variable "transit_gateway_name" {
+  description = "name of Transit Gateway deployed by Valtix"
+}
+
+//Valtix gateway variables
+variable "valtix_ingress_gw_name" {
+  description = "name of Valtix ingress gateway"
+}
+variable "valtix_egress_gw_name" {
+  description = "name of Valtix ingress gateway"
+}
+variable "gw_keypair_name" {
+  description = "name of EC2 keypair to use to deploy Valtix gateways"
 }
