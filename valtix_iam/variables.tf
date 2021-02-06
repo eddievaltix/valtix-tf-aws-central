@@ -36,3 +36,6 @@ variable "region" {
 variable "cloud_account_name" {
   description = "Valtix cloud account name"
 }
+variable "inventory_region" {
+  description = "list of inventory regions to enable for Valtix to discover"
+}

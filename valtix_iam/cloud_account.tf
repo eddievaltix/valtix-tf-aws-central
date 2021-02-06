@@ -6,7 +6,7 @@ resource "valtix_cloud_account" aws1 {
   aws_account_number       = var.account_number
   aws_iam_role_external_id = var.external_id
   inventory_monitoring {
-    regions          = [var.region]
+    regions          = var.inventory_region
     refresh_interval = 60
   }
   depends_on = [module.iam] //need to add explicit dependency otherwise IAM policy could be deleted far before dependencies are destroyed
