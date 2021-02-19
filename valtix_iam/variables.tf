@@ -39,3 +39,6 @@ variable "cloud_account_name" {
 variable "inventory_region" {
   description = "list of inventory regions to enable for Valtix to discover"
 }
+variable "s3_bucket" {
+  description = "name of S3 bucket where you want to store cloudtrail, route53 query logs and vpc flow logs"
+}
